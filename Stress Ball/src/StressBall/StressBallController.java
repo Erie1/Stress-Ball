@@ -22,20 +22,20 @@ public class StressBallController implements Initializable {
     private Label ClickSpeed;
     private Label ClickSpeedHighscore;
     
-    private void setCounter(int x){
+    private void setClicks(int x){
         counter = x;
 	FXCounter.setText(Integer.toString(counter));
     }
     
     @FXML
     private void Count(ActionEvent event) {
-	setCounter(++counter);
+	setClicks(++counter);
 	speedCount();
     }
     
     @FXML
     private void speedRun(ActionEvent event) {
-	setCounter(0);
+	setClicks(0);
 	//TODO implement threading to set and display countdown and result in
 	//showing score and if necesary change highscore
 	//(start counting after first click or 1 sec)
@@ -47,7 +47,7 @@ public class StressBallController implements Initializable {
         
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-	setCounter(0);
+	setClicks(0);
     }    
     
 }
