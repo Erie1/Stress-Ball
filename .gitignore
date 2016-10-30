@@ -1,0 +1,40 @@
+/Stress-Ball/nbproject/private/
+/Stress-Ball/dist/
+/Stress-Ball/build/
+Stress-Ball/build.xml
+Stress-Ball/manifest.mf
+Stress-Ball/nbproject/build-impl.xml
+Stress-Ball/nbproject/configs/Run_as_WebStart.properties
+Stress-Ball/nbproject/configs/Run_in_Browser.properties
+Stress-Ball/nbproject/genfiles.properties
+Stress-Ball/nbproject/jfx-impl.xml
+Stress-Ball/nbproject/project.properties
+Stress-Ball/nbproject/project.xml
+Stress Ball/build.xml
+Stress Ball/build/built-jar.properties
+Stress Ball/build/classes/StressBall.class
+Stress Ball/build/classes/StressBall.fxml
+Stress Ball/build/classes/StressBallController.class
+Stress Ball/dist/Stress Ball.html
+Stress Ball/dist/Stress Ball.jar
+Stress Ball/dist/Stress Ball.jnlp
+Stress Ball/dist/web-files/dtjava.js
+Stress Ball/dist/web-files/error.png
+Stress Ball/dist/web-files/get_java.png
+Stress Ball/dist/web-files/get_javafx.png
+Stress Ball/dist/web-files/javafx-chrome.png
+Stress Ball/dist/web-files/javafx-loading-100x100.gif
+Stress Ball/dist/web-files/javafx-loading-25x25.gif
+Stress Ball/dist/web-files/upgrade_java.png
+Stress Ball/dist/web-files/upgrade_javafx.png
+Stress Ball/manifest.mf
+Stress Ball/nbproject/build-impl.xml
+Stress Ball/nbproject/configs/Run_as_WebStart.properties
+Stress Ball/nbproject/configs/Run_in_Browser.properties
+Stress Ball/nbproject/genfiles.properties
+Stress Ball/nbproject/jfx-impl.xml
+Stress Ball/nbproject/private/configs/Run_as_WebStart.properties
+Stress Ball/nbproject/private/configs/Run_in_Browser.properties
+Stress Ball/nbproject/private/private.properties
+Stress Ball/nbproject/project.properties
+Stress Ball/nbproject/project.xml
