@@ -27,6 +27,10 @@ public class StressBallController implements Initializable {
 	FXCounter.setText(Integer.toString(counter));
     }
     
+    public int getCounter() {
+	return counter;
+    }
+    
     @FXML
     private void Count(ActionEvent event) {
 	setClicks(++counter);
