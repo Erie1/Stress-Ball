@@ -19,6 +19,8 @@ public class StressBallController implements Initializable {
     @FXML
     private Label FXCounter;
     private Label HighScore;
+    private Label ClickSpeed;
+    private Label ClickSpeedHighscore;
     
     private void setCounter(int x){
         counter = x;
@@ -28,6 +30,7 @@ public class StressBallController implements Initializable {
     @FXML
     private void Count(ActionEvent event) {
 	setCounter(++counter);
+	speedCount();
     }
     
     @FXML
@@ -35,10 +38,10 @@ public class StressBallController implements Initializable {
 	setCounter(0);
 	//TODO implement threading to set and display countdown and result in
 	//showing score and if necesary change highscore
+	//(start counting after first click or 1 sec)
     }
     
-    @FXML
-    private void speedCount(ActionEvent event) {
+    private void speedCount() {
 	//TODO implement clickspeed counter
     }
         

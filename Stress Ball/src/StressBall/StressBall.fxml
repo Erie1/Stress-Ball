@@ -12,8 +12,24 @@
             <Button layoutX="0" layoutY="0" text="speedrun" onAction="#speedRun" />
             <Button layoutY="90" text="Click Me!" onAction="#Count" />
             <HBox minWidth="69" minHeight="16" alignment="CENTER" >
-                <Label text="counter: " />
+                <Label text="Clicks: " />
                 <Label alignment="CENTER" fx:id="FXCounter" />
+            </HBox>
+            <HBox minWidth="69" minHeight="16" alignment="CENTER" >
+                <Label text="Last run:  " />
+                <Label alignment="CENTER" fx:id="lastScore" />
+            </HBox>
+            <HBox minWidth="69" minHeight="16" alignment="CENTER" >
+                <Label text="highscore: " />
+                <Label alignment="CENTER" fx:id="HighScore" />
+            </HBox>
+            <HBox minWidth="69" minHeight="16" alignment="CENTER" >
+                <Label text="Clickspeed: " />
+                <Label alignment="CENTER" fx:id="ClickSpeed" />
+            </HBox>
+            <HBox minWidth="69" minHeight="16" alignment="CENTER" >
+                <Label text="Highest speed:  " />
+                <Label alignment="CENTER" fx:id="ClickSpeedHighscore" />
             </HBox>
         </VBox>
     </children>
