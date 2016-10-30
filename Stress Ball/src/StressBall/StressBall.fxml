@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" fx:controller="StressBall.StressBallController">
+    <children>
+        <VBox minWidth="320" minHeight="300"  alignment="CENTER">
+            <Button layoutX="0" layoutY="0" text="speedrun" onAction="#speedRun" />
+            <Button layoutY="90" text="Click Me!" onAction="#Count" />
+            <HBox minWidth="69" minHeight="16" alignment="CENTER" >
+                <Label text="counter: " />
+                <Label alignment="CENTER" fx:id="FXCounter" />
+            </HBox>
+        </VBox>
+    </children>
+</AnchorPane>

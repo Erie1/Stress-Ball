@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+package StressBall;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +12,9 @@ import javafx.stage.Stage;
  */
 public class StressBall extends Application {
     
+    protected int StageWidth = 320;
+    protected int StageHeight = 300;
+    
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("StressBall.fxml"));
@@ -23,6 +22,8 @@ public class StressBall extends Application {
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
+	stage.setMinHeight(StageHeight);
+	stage.setMinWidth(StageWidth);
         stage.show();
     }
 
@@ -32,5 +33,4 @@ public class StressBall extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
 }
