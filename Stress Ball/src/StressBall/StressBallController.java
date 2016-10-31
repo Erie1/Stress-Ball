@@ -1,7 +1,6 @@
 package StressBall;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -18,30 +17,22 @@ public class StressBallController implements Initializable {
      */
     @FXML
     public  Label FXCounter, lastScore, HighScore, ClickSpeed, ClickSpeedHighScore;
+    private static StressBallController Instance;
     
     /**
      * count action increases click counter when clicking the button
      * @param event 
      */
     @FXML
-    private void Count(ActionEvent event) {
+    private void Count() {
 	SpeedoMeter.getInstance().setTime(System.currentTimeMillis());
-	StressBall.Counter++;
-    }
-    
-    /**
-     * activates a small game to see how many clicks you can accomplish in ... seconds
-     * @param event 
-     */
-    @FXML
-    private void speedRun(ActionEvent event) {
-	StressBall.Counter = 0;
+	Scoring.getInstance().Clicked();
+	System.out.println("you clicked me!");
     }
     
     @FXML
-    private void reset(ActionEvent event) {
-	StressBall.Counter = StressBall.ClickSpeedHighscore =
-		StressBall.Highscore = StressBall.LastRun = 0;
+    private void reset() {
+	Scoring.getInstance().reset();
     }
     
     /**
@@ -51,10 +42,17 @@ public class StressBallController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-	FXCounter.setText(Integer.toString(StressBall.Counter));
-	lastScore.setText(Integer.toString(StressBall.LastRun));
-	HighScore.setText(Integer.toString(StressBall.Highscore));
-	ClickSpeed.setText(Integer.toString(StressBall.Speed));
-	ClickSpeedHighScore.setText(Integer.toString(StressBall.ClickSpeedHighscore));
+	Instance = this;
+	setScores(0,0,0);
+    }
+    
+    public static StressBallController getInstance() {
+	return Instance;
+    }
+    
+    public void setScores(int Counter, int Speed, int ClickSpeedHighscore) {
+	FXCounter.setText(Integer.toString(Counter));
+	ClickSpeed.setText(Integer.toString(Speed));
+	ClickSpeedHighScore.setText(Integer.toString(ClickSpeedHighscore));
     }
 }
