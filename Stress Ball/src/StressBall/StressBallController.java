@@ -1,6 +1,7 @@
 package StressBall;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -51,8 +52,11 @@ public class StressBallController implements Initializable {
     }
     
     public void setScores(int Counter, int Speed, int ClickSpeedHighscore) {
-	FXCounter.setText(Integer.toString(Counter));
-	ClickSpeed.setText(Integer.toString(Speed));
-	ClickSpeedHighScore.setText(Integer.toString(ClickSpeedHighscore));
+	Platform.runLater(() -> {
+	    FXCounter.setText(Integer.toString(Counter));
+	    ClickSpeed.setText(Integer.toString(Speed));
+	    ClickSpeedHighScore.setText(Integer.toString(ClickSpeedHighscore));
+	});
+	
     }
 }
