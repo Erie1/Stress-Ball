@@ -1,6 +1,8 @@
 package StressBall;
 
 import java.util.LinkedList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -8,7 +10,7 @@ import java.util.LinkedList;
  */
 public class SpeedoMeter extends Thread {
     
-    private LinkedList<Long> Times;
+    private final LinkedList<Long> Times;
     private static SpeedoMeter Instance;
     
     /**
@@ -41,11 +43,12 @@ public class SpeedoMeter extends Thread {
 	System.out.println("speedometer started");
 	while(true){
 	    Long Second = System.currentTimeMillis() - 1000;
+	    System.out.print("");
 	    while(!Times.isEmpty() && Times.getFirst() < Second) {
 		Times.removeFirst();
-		System.out.println("removed time");
+		System.out.println("removed click");
+		Scoring.getInstance().ClickScore(Times.size());
 	    }
-	    Scoring.getInstance().ClickScore(Times.size());
 	}
     }
 }

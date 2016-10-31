@@ -30,9 +30,9 @@ public class Scoring {
 	Speed = speed;
 	if (Speed > ClickSpeedHighscore){
 	    ClickSpeedHighscore = Speed;
-	    StressBallController.getInstance().setScores(Counter, Speed, ClickSpeedHighscore);
 	    System.out.println("NEW HIGHSCORE");
-	}   
+	}
+	StressBallController.getInstance().setScores(Counter, Speed, ClickSpeedHighscore);   
     }
     
     public void reset() {
@@ -63,6 +63,7 @@ public class Scoring {
 	    ClickSpeedHighscore = 0;
 	    System.out.println("no scores found");
 	}
+	StressBallController.getInstance().setScores(Counter, Speed, ClickSpeedHighscore);
     }
     
     /**

@@ -43,7 +43,7 @@ public class StressBallController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 	Instance = this;
-	setScores(0,0,0);
+	Scoring.getInstance().setHighscores();
     }
     
     public static StressBallController getInstance() {

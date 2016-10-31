@@ -35,8 +35,8 @@ public class StressBall extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-	Scoring.getInstance().setHighscores();
 	Thread Speedometer = new Thread(SpeedoMeter.getInstance());
+	Speedometer.setDaemon(true);
 	Speedometer.start();
         launch(args);
     }
