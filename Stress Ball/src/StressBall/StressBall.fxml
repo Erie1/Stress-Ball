@@ -19,12 +19,12 @@
             <HBox minWidth="69" minHeight="16" alignment="CENTER" >
                 <Label text="Last run:  " />
                 <Label alignment="CENTER" fx:id="lastScore" />
-                <Label text="Clicks" />
+                <Label text=" Clicks" />
             </HBox>
             <HBox minWidth="69" minHeight="16" alignment="CENTER" >
                 <Label text="highscore: " />
                 <Label alignment="CENTER" fx:id="HighScore" />
-                <Label text="Clicks" />
+                <Label text=" Clicks" />
             </HBox>
             <HBox minWidth="69" minHeight="16" alignment="CENTER" >
                 <Label text="Clickspeed: " />

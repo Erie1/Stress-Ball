@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -44,8 +45,7 @@ public class StressBall extends Application {
     public static void main(String[] args) {
 	setHighscores();
 	Counter = 0;
-	Thread Speedometer;
-	Speedometer = new Thread(SpeedoMeter.getInstance());
+	Thread Speedometer = new Thread(SpeedoMeter.getInstance());
 	Speedometer.setDaemon(true);
 	Speedometer.start();
         launch(args);
@@ -60,9 +60,11 @@ public class StressBall extends Application {
 	    sc = new Scanner(new File("scores.txt"));
 	    Highscore = sc.nextInt();
 	    ClickSpeedHighscore = sc.nextInt();
+	    System.out.println("scores loaded");
 	} catch (FileNotFoundException ex) {
 	    Highscore = 0;
 	    ClickSpeedHighscore = 0;
+	    System.out.println("no scores found");
 	}
     }
     
@@ -73,6 +75,8 @@ public class StressBall extends Application {
 	try(PrintWriter writer = new PrintWriter("scores.txt", "UTF-8")) {
 	    writer.println(Highscore);
 	    writer.println(ClickSpeedHighscore);
+	    writer.flush();
+	    System.out.println("Scores written");
 	} catch (FileNotFoundException | UnsupportedEncodingException e) { 
 	    System.out.println("something went wrong here");
 	}

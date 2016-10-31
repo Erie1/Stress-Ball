@@ -5,8 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
 
 
 /**
@@ -53,10 +51,10 @@ public class StressBallController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-	FXCounter.textProperty().bind(new SimpleIntegerProperty(StressBall.Counter).asString());
-	lastScore.textProperty().bind(new SimpleIntegerProperty(StressBall.LastRun).asString());
-	HighScore.textProperty().bind(new SimpleIntegerProperty(StressBall.Highscore).asString());
-	ClickSpeed.textProperty().bind(new SimpleIntegerProperty(StressBall.Speed).asString());
-	ClickSpeedHighScore.textProperty().bind(new SimpleIntegerProperty(StressBall.ClickSpeedHighscore).asString());
+	FXCounter.setText(Integer.toString(StressBall.Counter));
+	lastScore.setText(Integer.toString(StressBall.LastRun));
+	HighScore.setText(Integer.toString(StressBall.Highscore));
+	ClickSpeed.setText(Integer.toString(StressBall.Speed));
+	ClickSpeedHighScore.setText(Integer.toString(StressBall.ClickSpeedHighscore));
     }
 }
