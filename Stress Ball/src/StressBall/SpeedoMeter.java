@@ -15,8 +15,7 @@ public class SpeedoMeter implements Runnable {
      * the current clickspeed
      */
     private static SpeedoMeter Instance = null;
-    LinkedList<Long> Times;
-    int Speed;
+    private final LinkedList<Long> Times;
     
     /**
      * the constructor method
@@ -55,10 +54,9 @@ public class SpeedoMeter implements Runnable {
 	    while(!Times.isEmpty() && Times.getFirst() < Second)
 		Times.removeFirst();
 	    
-	    Speed = Times.size();
-	    System.out.println(Speed);
-	    if (Speed > StressBall.ClickSpeedHighscore)
-	        StressBall.ClickSpeedHighscore = Speed;
+	    StressBall.Speed = Times.size();
+	    if (StressBall.Speed > StressBall.ClickSpeedHighscore)
+	        StressBall.ClickSpeedHighscore = StressBall.Speed;
 	}
     }
 }
