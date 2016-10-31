@@ -12,9 +12,11 @@ public class SpeedoMeter implements Runnable {
     /**
      * the SpeedoMeter instance for singleton implementation
      * the linkedList of click times for calculating clickspeed
+     * the current clickspeed
      */
     private static SpeedoMeter Instance = null;
     LinkedList<Long> Times;
+    int Speed;
     
     /**
      * the constructor method
@@ -46,15 +48,17 @@ public class SpeedoMeter implements Runnable {
      */
     @Override
     public void run() {
-	while(!interrupted()){
+	while(true){
+	    // loops through the last clicks to see
+	    // which one are within a second ago
 	    Long Second = System.currentTimeMillis() - 1000;
-	    while(!Times.isEmpty() && Times.getFirst() < Second) {
+	    while(!Times.isEmpty() && Times.getFirst() < Second)
 		Times.removeFirst();
-	    }
-	int Temp = Times.size();
-	if (Temp > StressBall.ClickSpeedHighscore)
-	    StressBall.ClickSpeedHighscore = Temp;
-	System.out.println(Temp);
+	    
+	    Speed = Times.size();
+	    System.out.println(Speed);
+	    if (Speed > StressBall.ClickSpeedHighscore)
+	        StressBall.ClickSpeedHighscore = Speed;
 	}
     }
 }
