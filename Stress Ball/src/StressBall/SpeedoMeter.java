@@ -51,7 +51,10 @@ public class SpeedoMeter implements Runnable {
 	    while(!Times.isEmpty() && Times.getFirst() < Second) {
 		Times.removeFirst();
 	    }
-	System.out.println(Times.size());
+	int Temp = Times.size();
+	if (Temp > StressBall.ClickSpeedHighscore)
+	    StressBall.ClickSpeedHighscore = Temp;
+	System.out.println(Temp);
 	}
     }
 }

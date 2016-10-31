@@ -1,5 +1,6 @@
 package StressBall;
 
+import java.io.FileReader;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -12,17 +13,12 @@ import javafx.scene.control.Label;
  * @author Erik
  */
 public class StressBallController implements Initializable {
-    
-    /**
-     * click counter
-     */
-    private int Counter;
         
     /**
      * labels for the fxml
      */
     @FXML
-    public  Label FXCounter, HighScore, ClickSpeed, ClickSpeedHighscore;
+    public  Label FXCounter, HighScore, ClickSpeed, ClickSpeedHighScore;
     
     /**
      * count action increases click counter when clicking the button
@@ -31,8 +27,8 @@ public class StressBallController implements Initializable {
     @FXML
     private void Count(ActionEvent event) {
 	SpeedoMeter.getInstance().setTime(System.currentTimeMillis());
-	Counter++;
-	FXCounter.setText(Integer.toString(Counter));
+	StressBall.Counter++;
+	FXCounter.setText(Integer.toString(StressBall.Counter));
     }
     
     /**
@@ -41,14 +37,21 @@ public class StressBallController implements Initializable {
      */
     @FXML
     private void speedRun(ActionEvent event) {
-	Counter = 0;
-	FXCounter.setText(Integer.toString(Counter));
+	StressBall.Counter = 0;
+	FXCounter.setText(Integer.toString(StressBall.Counter));
 	
     }
-        
+    
+    /**
+     * initialises the window and counter
+     * @param url
+     * @param rb 
+     */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-	Counter = 0;
-	FXCounter.setText(Integer.toString(Counter));
+    public void initialize(URL url, ResourceBundle rb) {	
+	FXCounter.setText(Integer.toString(StressBall.Counter));
+	HighScore.setText(Integer.toHexString(StressBall.Highscore));
+	ClickSpeed.setText(Integer.toString(0));
+	ClickSpeedHighScore.setText(Integer.toString(StressBall.ClickSpeedHighscore));
     }    
 }
