@@ -31,6 +31,9 @@ public class StressBall extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+	Thread Speed = new Thread(SpeedoMeter.getInstance());
+	Speed.setDaemon(true);
+	Speed.start();
         launch(args);
     }
 }
