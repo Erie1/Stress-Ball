@@ -13,11 +13,21 @@ import javafx.scene.control.Label;
  */
 public class StressBallController implements Initializable {
     
+    /**
+     * click counter
+     */
     private int Counter;
-    
+        
+    /**
+     * labels for the fxml
+     */
     @FXML
     public  Label FXCounter, HighScore, ClickSpeed, ClickSpeedHighscore;
     
+    /**
+     * count action increases click counter when clicking the button
+     * @param event 
+     */
     @FXML
     private void Count(ActionEvent event) {
 	SpeedoMeter.getInstance().setTime(System.currentTimeMillis());
@@ -25,13 +35,15 @@ public class StressBallController implements Initializable {
 	FXCounter.setText(Integer.toString(Counter));
     }
     
+    /**
+     * activates a small game to see how many clicks you can accomplish in ... seconds
+     * @param event 
+     */
     @FXML
     private void speedRun(ActionEvent event) {
 	Counter = 0;
 	FXCounter.setText(Integer.toString(Counter));
-	//TODO implement threading to set and display countdown and result in
-	//showing score and if necesary change highscore
-	//(start counting after first click or 1 sec)
+	
     }
         
     @Override

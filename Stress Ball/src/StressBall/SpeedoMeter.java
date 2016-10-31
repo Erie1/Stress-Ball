@@ -41,6 +41,9 @@ public class SpeedoMeter implements Runnable {
 	Times.add(Time);
     }
 
+    /**
+     * run method for runnable interface
+     */
     @Override
     public void run() {
 	while(!interrupted()){
