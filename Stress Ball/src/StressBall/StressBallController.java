@@ -31,6 +31,9 @@ public class StressBallController implements Initializable {
 	System.out.println("you clicked me!");
     }
     
+    /**
+     * resets the scores
+     */
     @FXML
     private void reset() {
 	Scoring.getInstance().reset();
@@ -47,10 +50,20 @@ public class StressBallController implements Initializable {
 	Scoring.getInstance().setHighscores();
     }
     
+    /**
+     * singleton was needed to resolve some static method isues
+     * @return the instance
+     */
     public static StressBallController getInstance() {
 	return Instance;
     }
     
+    /**
+     * updates the labels with the new scores
+     * @param Counter
+     * @param Speed
+     * @param ClickSpeedHighscore 
+     */
     public void setScores(int Counter, int Speed, int ClickSpeedHighscore) {
 	Platform.runLater(() -> {
 	    FXCounter.setText(Integer.toString(Counter));

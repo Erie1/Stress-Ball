@@ -20,6 +20,10 @@ public class SpeedoMeter extends Thread {
 	Times = new LinkedList<>();
     }
     
+    /**
+     * singleton was needed to resolve some static method isues
+     * @return the instance
+     */
     public static SpeedoMeter getInstance() {
 	if(Instance == null)
 	    Instance = new SpeedoMeter();
@@ -32,6 +36,7 @@ public class SpeedoMeter extends Thread {
      */
     public void setTime(Long Time) {
 	Times.addLast(Time);
+	Scoring.getInstance().ClickScore(Times.size());
 	System.out.println("Click added at: " + Time + " Speed is now: " + Times.size());
     }
 

@@ -15,6 +15,11 @@ public class StressBall extends Application {
     protected int StageWidth = 320;
     protected int StageHeight = 300;
     
+    /**
+     * build the stage and set restraints
+     * @param stage
+     * @throws Exception 
+     */
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("StressBall.fxml"));

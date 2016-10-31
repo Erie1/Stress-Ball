@@ -17,15 +17,27 @@ import java.util.Scanner;
  */
 public class Scoring {
     
+    /**
+     * the Clickcounter, clickspeed, and highscore variables
+     * the instance for this part of the program
+     */
     private int Counter, Speed, ClickSpeedHighscore;
     private static Scoring Instance;
     
+    /**
+     * singleton was needed to resolve some static method isues
+     * @return the instance
+     */
     public static Scoring getInstance() {
 	if(Instance == null)
 	    Instance = new Scoring();
 	return Instance;
     }
     
+    /**
+     * update clickspeed and if necesary change highscore
+     * @param speed the current clickspeed
+     */
     public void ClickScore(int speed) {
 	Speed = speed;
 	if (Speed > ClickSpeedHighscore){
@@ -35,6 +47,9 @@ public class Scoring {
 	StressBallController.getInstance().setScores(Counter, Speed, ClickSpeedHighscore);   
     }
     
+    /**
+     * resets all the stats
+     */
     public void reset() {
 	Counter = 0;
 	Speed = 0;
@@ -43,6 +58,9 @@ public class Scoring {
 	System.out.println("scores have been reset");
     }
     
+    /**
+     * handles clicks
+     */
     public void Clicked() {
 	Counter++;
 	System.out.println("counter increased");
