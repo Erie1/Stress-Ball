@@ -5,6 +5,7 @@
 */
 .click-button {
     -fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-text-fill: white;
     -fx-background-radius: 5em; 
     -fx-min-width: 90px;
     -fx-min-height: 90px;

@@ -3,4 +3,6 @@
     Created on : Nov 2, 2016, 12:54:21 PM
     Author     : Corwin
 */
-
+.root {
+    -fx-background-color:lightblue;
+}
