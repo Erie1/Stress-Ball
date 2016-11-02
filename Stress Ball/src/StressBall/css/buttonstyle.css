@@ -7,9 +7,24 @@
     -fx-background-color: linear-gradient(#ff5400, #be1d00);
     -fx-text-fill: white;
     -fx-background-radius: 5em; 
-    -fx-min-width: 90px;
-    -fx-min-height: 90px;
-    -fx-max-width: 90px;
-    -fx-max-height: 90px;
+    -fx-min-width: 100px;
+    -fx-min-height: 100px;
+    -fx-max-width: 100px;
+    -fx-max-height: 100px;
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 2.5);
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+}
+
+.reset-button {
+    -fx-background-color: 
+        #090a0c,
+        linear-gradient(#38424b 0%, #1f2429 20%, #191d22 100%),
+        linear-gradient(#20262b, #191d22),
+        radial-gradient(center 50% 0%, radius 100%, rgba(114,131,148,0.9), rgba(255,255,255,0));
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+    -fx-top: 400px;
 }
 

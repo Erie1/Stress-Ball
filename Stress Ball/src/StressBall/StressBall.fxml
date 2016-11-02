@@ -9,21 +9,23 @@
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" id="AnchorPane" fx:controller="StressBall.StressBallController">
     <children>
         <VBox minWidth="320" minHeight="300"  alignment="CENTER">
-            <Button layoutX="0" layoutY="0" text="reset" onAction="#reset" />
             <Button fx:id="clickButton" layoutY="90" text="Click Me!" onAction="#Count" styleClass="click-button" />
             <HBox minWidth="69" minHeight="16" alignment="CENTER" >
-                <Label text="Clicks: " />
-                <Label alignment="CENTER" fx:id="FXCounter" />
+                <Label text="Clicks: " styleClass="label-text" />
+                <Label alignment="CENTER" fx:id="FXCounter" styleClass="label-text" />
             </HBox>
             <HBox minWidth="69" minHeight="16" alignment="CENTER" >
-                <Label text="Clickspeed: " />
-                <Label alignment="CENTER" fx:id="ClickSpeed" />
-                <Label text=" Clicks/Second" />
+                <Label text="Clickspeed: " styleClass="label-text" />
+                <Label alignment="CENTER" fx:id="ClickSpeed" styleClass="label-text" />
+                <Label text=" Clicks/Second" styleClass="label-text" />
             </HBox>
             <HBox minWidth="69" minHeight="16" alignment="CENTER" >
-                <Label text="Highest speed:  " />
-                <Label alignment="CENTER" fx:id="ClickSpeedHighScore" />
-                <Label text=" Clicks/Second" />
+                <Label text="Highest speed:  " styleClass="label-text" />
+                <Label alignment="CENTER" fx:id="ClickSpeedHighScore" styleClass="label-text" />
+                <Label text=" Clicks/Second" styleClass="label-text" />
+            </HBox>
+            <HBox minWidth="0" minHeight="70" alignment="BOTTOM_CENTER" >
+                <Button fx:id="resetButton" layoutX="0" layoutY="0" text="reset" onAction="#reset" styleClass="reset-button" />
             </HBox>
         </VBox>
     </children>

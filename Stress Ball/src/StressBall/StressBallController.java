@@ -4,6 +4,7 @@ import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.Button;
 
@@ -22,10 +23,11 @@ public class StressBallController implements Initializable {
     private static StressBallController Instance;
     
     /**
-     * button to click
+     * buttons to the fxml
      */
     @FXML
     Button clickButton;
+    Button resetButton;
     
     /**
      * count action increases click counter when clicking the button
