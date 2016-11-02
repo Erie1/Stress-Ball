@@ -1,0 +1,14 @@
+/* 
+    Style of buttons in app
+    Created on : Nov 2, 2016, 12:53:58 PM
+    Author     : Corwin
+*/
+.click-button {
+    -fx-background-color: linear-gradient(#ff5400, #be1d00);
+    -fx-background-radius: 5em; 
+    -fx-min-width: 90px;
+    -fx-min-height: 90px;
+    -fx-max-width: 90px;
+    -fx-max-height: 90px;
+}
+
