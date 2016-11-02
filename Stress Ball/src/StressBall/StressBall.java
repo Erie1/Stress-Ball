@@ -25,6 +25,7 @@ public class StressBall extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("StressBall.fxml"));
         
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("css/buttonstyle.css").toExternalForm());
         
         stage.setScene(scene);
 	stage.setMinHeight(StageHeight);

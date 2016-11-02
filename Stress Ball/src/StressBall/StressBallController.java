@@ -5,6 +5,7 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.Button;
 
 
 /**
@@ -19,6 +20,12 @@ public class StressBallController implements Initializable {
     @FXML
     public  Label FXCounter, lastScore, HighScore, ClickSpeed, ClickSpeedHighScore;
     private static StressBallController Instance;
+    
+    /**
+     * button to click
+     */
+    @FXML
+    Button clickButton;
     
     /**
      * count action increases click counter when clicking the button
