@@ -26,6 +26,7 @@ public class StressBall extends Application {
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("css/buttonstyle.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("css/stressballstyle.css").toExternalForm());
         
         stage.setScene(scene);
 	stage.setMinHeight(StageHeight);

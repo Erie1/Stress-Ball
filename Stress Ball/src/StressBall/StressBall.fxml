@@ -10,7 +10,7 @@
     <children>
         <VBox minWidth="320" minHeight="300"  alignment="CENTER">
             <Button layoutX="0" layoutY="0" text="reset" onAction="#reset" />
-            <Button fx:id="clickButton" layoutY="90" text="Click Me!" onAction="#Count" styleClass="click-button" stylesheets="@../css/buttonstyle.css" />
+            <Button fx:id="clickButton" layoutY="90" text="Click Me!" onAction="#Count" styleClass="click-button" />
             <HBox minWidth="69" minHeight="16" alignment="CENTER" >
                 <Label text="Clicks: " />
                 <Label alignment="CENTER" fx:id="FXCounter" />
